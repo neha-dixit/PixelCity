@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -39,42 +39,47 @@
                                     <constraint firstAttribute="height" constant="70" id="ldv-X0-Irr"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCs-gi-PgF">
-                                <rect key="frame" x="364" y="792" width="50" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6d-Ig-8AB">
+                                <rect key="frame" x="0.0" y="850" width="414" height="1"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="JQ8-Lo-4PY"/>
-                                    <constraint firstAttribute="height" constant="50" id="mEB-xk-pp9"/>
+                                    <constraint firstAttribute="height" constant="1" id="ypW-06-Gpb"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCs-gi-PgF">
+                                <rect key="frame" x="364" y="780" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="93O-wh-whg"/>
+                                    <constraint firstAttribute="width" constant="50" id="UlD-7l-Ura"/>
                                 </constraints>
                                 <state key="normal" image="locationButton"/>
                                 <connections>
                                     <action selector="centerMapBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CYp-M6-6ua"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6d-Ig-8AB">
-                                <rect key="frame" x="0.0" y="850" width="414" height="46"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="LTF-kT-kwW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7iL-N4-Yu1"/>
                             <constraint firstItem="LTF-kT-kwW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Auw-im-o2H"/>
                             <constraint firstItem="R6d-Ig-8AB" firstAttribute="top" secondItem="LTF-kT-kwW" secondAttribute="bottom" id="DUc-9V-HX5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wCs-gi-PgF" secondAttribute="trailing" id="FDj-uO-Dnt"/>
                             <constraint firstItem="adg-jn-6jT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Rco-rN-u50"/>
                             <constraint firstItem="adg-jn-6jT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="X5d-0s-hDI"/>
+                            <constraint firstAttribute="bottom" secondItem="R6d-Ig-8AB" secondAttribute="bottom" constant="45" id="Xm5-Dd-yls"/>
                             <constraint firstItem="R6d-Ig-8AB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bfj-pT-aNg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wCs-gi-PgF" secondAttribute="bottom" constant="20" id="hWI-OU-wzR"/>
                             <constraint firstItem="adg-jn-6jT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iTi-Cq-UOY"/>
-                            <constraint firstAttribute="bottom" secondItem="R6d-Ig-8AB" secondAttribute="bottom" id="mhE-ay-nH4"/>
+                            <constraint firstItem="R6d-Ig-8AB" firstAttribute="top" secondItem="wCs-gi-PgF" secondAttribute="bottom" constant="20" id="jHS-m2-WHA"/>
                             <constraint firstItem="R6d-Ig-8AB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="obF-JJ-Vxx"/>
-                            <constraint firstItem="R6d-Ig-8AB" firstAttribute="top" secondItem="wCs-gi-PgF" secondAttribute="bottom" constant="8" symbolic="YES" id="tDr-SZ-pCY"/>
+                            <constraint firstItem="wCs-gi-PgF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tNa-fa-FB5"/>
                             <constraint firstItem="LTF-kT-kwW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="w65-BI-24N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="MapView" destination="LTF-kT-kwW" id="GBP-eC-gKi"/>
+                        <outlet property="MapViewBottomConstraint" destination="DUc-9V-HX5" id="L0S-Ez-dxQ"/>
+                        <outlet property="MapviewHeightConstaint" destination="ypW-06-Gpb" id="1om-pi-wzq"/>
+                        <outlet property="pullUPVIEw" destination="R6d-Ig-8AB" id="lzG-Vd-wg1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
